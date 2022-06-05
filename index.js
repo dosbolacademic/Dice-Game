@@ -6,7 +6,7 @@ function solution(){
 
   var FolderName = "images/"+FileName
 
-  var document1 = document.querySelectorAll('img')[0];
+  var document1 = $('img')[0];
 
   document1.setAttribute('src', FolderName);
 
@@ -18,7 +18,7 @@ function solution(){
 
   var FolderName2 = 'images/'+FileName2
 
-  var Document2 = document.querySelectorAll('img')[1];
+  var Document2 = $('img')[1];
 
   Document2.setAttribute('src',FolderName2)
 
