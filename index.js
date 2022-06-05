@@ -1,28 +1,40 @@
-function solution() {
+function solution(){
 
-  var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+  var RandomNumber1 = Math.floor(Math.random() *6)+1;
 
-  var randomDiceImage = "dice" + randomNumber1 + ".png";
+  var FileName= 'dice'+RandomNumber1+'.png'
 
-  var randomImageSource = "images/" + randomDiceImage;
+  var FolderName = "images/"+FileName
 
-  var image1 = document.querySelectorAll("img")[0];
+  var document1 = document.querySelectorAll('img')[0];
 
-  image1.setAttribute("src", randomImageSource);
+  document1.setAttribute('src', FolderName);
 
-  var randomNumber2 = Math.floor(Math.random() * 6) + 1;
 
-  var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
 
-  var image2 = document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
+  var RandomNumber2 = Math.floor(Math.random() *6)+1;
 
-  if (randomNumber1 > randomNumber2) {
-    document.querySelector("h1").innerHTML = "Player 1 Wins!";
-  } else if (randomNumber2 > randomNumber1) {
-    document.querySelector("h1").innerHTML = "Player 2 Wins";
-  } else {
-    document.querySelector("h1").innerHTML = "⭐️Draw⭐️";
-  }
+  var FileName2 = 'dice'+RandomNumber2+'.png'
+
+  var FolderName2 = 'images/'+FileName2
+
+  var Document2 = document.querySelectorAll('img')[1];
+
+  Document2.setAttribute('src',FolderName2)
+
+
+  if (RandomNumber1>RandomNumber2){
+    $('h1').text("Player 1 Wins!");}
+
+  else if (RandomNumber2>RandomNumber1){
+    $('h1').text("Player 2 Wins!");}
+  else{
+    $('h1').text("⭐️Draw⭐️")}
+
+
+
 }
 
-solution();
+
+
+solution()
